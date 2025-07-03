@@ -1,10 +1,12 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useState } from "react";
 
 const Index = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
+      <Header searchTerm={searchTerm} onSearchChange={setSearchTerm} />
 
       <main className="container mx-auto px-4 py-6">
         <div className="mb-6">
